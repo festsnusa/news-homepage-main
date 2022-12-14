@@ -1,0 +1,12 @@
+mixin aside(data)
+  .aside 
+    h1.aside__header New 
+    -let i=1
+    each value in data
+      .aside__box
+        a(href="#!" aria-label= value["title"]) 
+          h1.aside__title= value["title"]
+          p.aside__subtitle= value["subtitle"]
+          if (i<data.length)
+            hr
+          -i++

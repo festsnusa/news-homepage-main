@@ -1,0 +1,48 @@
+.footer {
+
+  $root: &;
+
+  padding: 3.5rem 0 2.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      #{$root}__title {
+        color: $redSoft;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 10rem;
+  }
+
+  &__number {
+    color: $grayBlue;
+    padding: 0.5rem 0 2rem;
+  }
+
+  &__title {
+    font-weight: 800;
+    padding-bottom: 1rem;
+  }
+
+  &__subtitle {
+    line-height: 2rem;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    flex-direction: row;
+  }
+}

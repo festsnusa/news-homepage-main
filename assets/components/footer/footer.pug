@@ -1,0 +1,11 @@
+mixin footer(data)
+  .footer 
+    -let i=1
+    each value in data 
+      .footer__item 
+        img.footer__image(src= value["image"], alt= value["title"])
+        .footer__box
+          h1.footer__number= `0${i}`
+          h2.footer__title= value["title"]
+          p.footer__subtitle= value["subtitle"]
+          -i++

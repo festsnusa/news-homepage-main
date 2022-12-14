@@ -1,0 +1,12 @@
+mixin list(arr)
+  ul.header__list
+    each value in arr
+      a.header__link(href="#!" aria-label= value) 
+        li.header__item= value
+
+mixin header 
+  .header 
+    a.header__link(href="#!" aria-label="home") 
+      img.header__image(src="./assets/images/logo.svg", alt="logo")
+    img.header__burger(src="./assets/images/icon-menu.svg" alt="menu")
+    +list(["home", "new", "popular", "trending", "categories"])

@@ -1,0 +1,33 @@
+include ./assets/components/aside/aside
+include ./assets/components/content/content
+include ./assets/components/footer/footer
+include ./assets/components/header/header 
+
+doctype html
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  title News homepage
+  link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+  link(rel="stylesheet", href="./assets/styles/styles.css")
+body
+  .component 
+    header.component__header
+      +header
+    main.component__main
+      +content
+    aside.component__aside
+      +aside([
+        {"title": "Hydrogen VS Electric Cars", "subtitle": "Will hydrogen-fueled cars ever catch up to EVs?"},
+        {"title": "The Downsides of AI Artistry", "subtitle": "What are the possible adverse effects of on-demand AI image generation?"},
+        {"title": "Is VC Funding Drying Up?", "subtitle": "Private funding by VC firms is down 50% YOY. We take a look at what that means."}
+      ])
+    footer.component__footer
+      +footer([
+        {"title": "Reviving Retro PCs", "subtitle": "What happens when old PCs are given modern upgrades?", "image": "./assets/images/image-retro-pcs.jpg"},
+        {"title": "Top 10 Laptops of 2022", "subtitle": "Our best picks for various needs and budgets.", "image": "./assets/images/image-top-laptops.jpg"},
+        {"title": "The Growth of Gaming", "subtitle": "How the pandemic has sparked fresh opportunities.", "image": "./assets/images/image-gaming-growth.jpg"}
+      ])
+  script(src="./app.js")
